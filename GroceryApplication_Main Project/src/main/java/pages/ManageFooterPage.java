@@ -14,7 +14,7 @@ public class ManageFooterPage
 	@FindBy(xpath="//a[@href=\"https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=1\"]") WebElement action;
 	@FindBy(xpath="//textarea[@id=\"content\"]") WebElement address;
 	@FindBy(xpath="//input[@id=\"email\"]")WebElement email;
-	@FindBy(xpath="//input[@id=\"phone\"]")WebElement phone;
+	@FindBy(xpath="//input[@id=\"phone\"]")WebElement phonenumber;
 	@FindBy(xpath="//button[@type=\"submit\"]") WebElement submit;
 	@FindBy(xpath="//div[@class=\"alert alert-success alert-dismissible\"]")WebElement alert;
 	
@@ -61,10 +61,10 @@ public class ManageFooterPage
 	 public ManageFooterPage editAndUpdatePhone()
 	{
 		
-		phone.clear();
+		 phonenumber.clear();
 		FakerUtility faker=new FakerUtility();
 		String phone=faker.generatePhoneNumber();
-		email.sendKeys(phone);
+		phonenumber.sendKeys(phone);
 		return this;
 	}
 	
