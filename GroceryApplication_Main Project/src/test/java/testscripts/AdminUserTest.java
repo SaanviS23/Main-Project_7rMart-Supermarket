@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -18,7 +19,7 @@ public class AdminUserTest extends BaseTest
 
 {
 	HomePage homepage;
- @Test(priority=1 ,retryAnalyzer=retry.Retry.class, description="This test case is to verify whether user is able to add and update admin details under Manage Admin")
+ @Test(priority=1 ,retryAnalyzer=retry.Retry.class, description="This testcase is to verify whether user is able to add and update admin details under Manage Admin")
 public void addNewAdminUser() throws IOException
 
 {
@@ -39,7 +40,7 @@ public void addNewAdminUser() throws IOException
 	
 	adminuserpage.clickOnSave();
 	boolean success=adminuserpage.issuccessfulAlertDisplayed();
-	Assert.assertTrue(success);
+	Assert.assertTrue(success,Constant.ADMINUPDATEMESSAGE);
 	
 }
 }

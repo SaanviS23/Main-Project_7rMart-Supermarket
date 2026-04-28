@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageCategoryPage;
@@ -32,7 +33,7 @@ public void addnewCategoryunderCategory() throws IOException
 	managecategory.clickOnaddNewbutton().enterTheCategory(categoryvalue).selectTheGroups().chooseFile().submit();	
 	
 	boolean savemessage=managecategory.isSuccessAlertDisplayed();
-	Assert.assertTrue(savemessage);
+	Assert.assertTrue(savemessage,Constant.CATEGORYUPDATEMESSAGE);
 	
 }	
 	

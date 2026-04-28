@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageFooterPage;
@@ -28,9 +29,9 @@ public class ManageFooterTest extends BaseTest
 	
 	ManageFooterPage managefooter=new ManageFooterPage(driver);
 	managefooter=homepage.clickonmoreinfolinkonManageFooter();
-	managefooter.clickonactionlink().editAndUpdateAddress().editAndUpdateEmail().clickOnSubmit();
+	managefooter.clickonactionlink().editAndUpdateAddress().editAndUpdateEmail().editAndUpdatePhone().clickOnSubmit();
 	boolean savemessage=managefooter.isAlertDisplayed();
-	Assert.assertTrue(savemessage);
+	Assert.assertTrue(savemessage,Constant.FOOTERUPDATEMESSAGE);
 	
 	}
 

@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		homepage=loginpage.clickOnSignIn();
 		boolean alertmessage = loginpage.isAlertDisplayed();
-		Assert.assertTrue(alertmessage,"HomePage is loaded with incorrect credentials entered");
+		Assert.assertTrue(alertmessage, Constant.INVALIDMESSAGE);
 	}
 
 	@Test(priority = 3,description="This test case is to verify whether user is able to login using invalid username and valid password")
@@ -57,7 +57,7 @@ public class LoginTest extends BaseTest
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		homepage=loginpage.clickOnSignIn();
 		boolean alertmessage = loginpage.isAlertDisplayed();
-		Assert.assertTrue(alertmessage);
+		Assert.assertTrue(alertmessage,Constant.INVALIDMESSAGE);
 
 	}
 
@@ -74,7 +74,7 @@ public class LoginTest extends BaseTest
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		homepage=loginpage.clickOnSignIn();
 		boolean alertmessage = loginpage.isAlertDisplayed();
-		Assert.assertTrue(alertmessage);
+		Assert.assertTrue(alertmessage,Constant.INVALIDMESSAGE);
 
 	}
 

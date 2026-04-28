@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -26,6 +27,6 @@ public class HomeTest extends BaseTest
 		logoutpage.ClickonLogOut();
 
 		boolean signinpage = logoutpage.isSiginPageDisplayed();
-		Assert.assertTrue(signinpage);
+		Assert.assertTrue(signinpage,Constant.LOGOUTMESSAGE);
 	}
 }

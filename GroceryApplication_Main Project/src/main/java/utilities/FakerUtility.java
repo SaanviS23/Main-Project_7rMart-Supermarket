@@ -31,4 +31,11 @@ public class FakerUtility                  //Used to create fake test data metho
 	public String generatePassword() {
 		return faker.internet().password();
 	}
+	
+	public String generatePhoneNumber()
+	{
+		
+		return faker.phoneNumber().cellPhone();
+		
+	}
 }

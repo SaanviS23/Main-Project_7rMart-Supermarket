@@ -58,13 +58,16 @@ public class ManageFooterPage
 		
 	}
 	
-	/* public void editAndUpdatePhone()
+	 public ManageFooterPage editAndUpdatePhone()
 	{
 		
 		phone.clear();
-		
+		FakerUtility faker=new FakerUtility();
+		String phone=faker.generatePhoneNumber();
+		email.sendKeys(phone);
+		return this;
 	}
-	*/
+	
 	
 	public ManageFooterPage clickOnSubmit()
 	{

@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageNewsPage;
@@ -29,7 +30,7 @@ public class ManageNewsTest extends BaseTest
 		managenews=homepage.clickOnmoreInfolinkOnManageNews();
 		managenews.clickOnaddNewButton().addNewDiscount(addnews).clickonSave();
 		boolean savemessage=managenews.isAlertisDisplayed();
-		Assert.assertTrue(savemessage);
+		Assert.assertTrue(savemessage,Constant.NEWSUPDATEMESSAGE);
 		
 		
 

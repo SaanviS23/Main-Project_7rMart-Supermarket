@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageContactPage;
@@ -32,6 +33,6 @@ public void updateExistingContactUsdetails() throws IOException
 			managecontact.clickonactionlink().editEmailfieldValueandenterNew().clickonUpdatebutton();
 			
 			boolean savemessage=managecontact.isAlertDisplayed();
-			Assert.assertTrue(savemessage);
+			Assert.assertTrue(savemessage,Constant.CONTACTUPDATEMESSAGE);
 }
 }
