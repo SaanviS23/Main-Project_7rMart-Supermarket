@@ -11,17 +11,17 @@ import com.aventstack.extentreports.Status;
 
 import utilities.ExtendReportUtility;
 
-public class Listeners implements ITestListener   // ITestListener INTERFACE provided TestNG
+public class Listeners implements ITestListener   
 
 {
 
 	ExtentTest test; 
 	  
  	ExtentReports extent = ExtendReportUtility.createExtentReports(); 
- 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>(); //ThreadLocal given for synchronisation
+ 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>(); 
   
  	public void onTestStart(ITestResult result) 
- 	{ //methods inside ITestListener
+ 	{ 
   
  		ITestListener.super.onTestStart(result); 
  		test = extent.createTest(result.getMethod().getMethodName()); 
@@ -77,7 +77,7 @@ public class Listeners implements ITestListener   // ITestListener INTERFACE pro
   
  	public void onTestFailedButWithinSuccessPercentage(ITestResult result)
 
- 	{ //for graph
+ 	{ 
   
  		ITestListener.super.onTestFailedButWithinSuccessPercentage(result); 
  	} 
@@ -97,7 +97,7 @@ public class Listeners implements ITestListener   // ITestListener INTERFACE pro
  	{ 
   
  		ITestListener.super.onFinish(context); 
- 		extent.flush(); //flush() called for successful report generation otherwise folder only present
+ 		extent.flush(); 
  	}
 	
 	

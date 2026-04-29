@@ -52,8 +52,7 @@ public class LoginTest extends BaseTest
 		String usernameValue = ExcelUtility.getStringData(3, 0, "loginpage");
 		String passwordValue = ExcelUtility.getStringData(3, 1, "loginpage");
 
-		LoginPage loginpage = new LoginPage(driver); // constructor - LoginPage(), Test is passing through one class to
-														// another class hence driver should be pass through
+		LoginPage loginpage = new LoginPage(driver); 
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		homepage=loginpage.clickOnSignIn();
 		boolean alertmessage = loginpage.isAlertDisplayed();
@@ -69,8 +68,7 @@ public class LoginTest extends BaseTest
 		String usernameValue = ExcelUtility.getStringData(4, 0, "loginpage");
 		String passwordValue = ExcelUtility.getStringData(4, 1, "loginpage");
 
-		LoginPage loginpage = new LoginPage(driver); // constructor - LoginPage(), Test is passing through one class to
-														// another class hence driver should be pass through
+		LoginPage loginpage = new LoginPage(driver); 
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		homepage=loginpage.clickOnSignIn();
 		boolean alertmessage = loginpage.isAlertDisplayed();

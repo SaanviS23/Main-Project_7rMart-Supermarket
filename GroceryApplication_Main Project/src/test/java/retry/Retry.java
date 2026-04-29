@@ -3,7 +3,7 @@ package retry;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public class Retry implements IRetryAnalyzer  // Used to rerun failed test cases
+public class Retry implements IRetryAnalyzer  
 
 {
 	
@@ -16,11 +16,11 @@ public boolean retry(ITestResult result)
 if (counter<retrylimit)
 	
 {
-counter++;  //reexcute
+counter++;  
 return true;
 }
 
-	return false; // to stop execution
+	return false; 
 	
 }
 }

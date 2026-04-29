@@ -2,7 +2,7 @@ package utilities;
 
 import com.github.javafaker.Faker;
 
-public class FakerUtility                  //Used to create fake test data methods should be called inside test case by creating object inside class as it's instant methods.
+public class FakerUtility                
 
 {
 	

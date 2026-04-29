@@ -15,21 +15,21 @@ public class ScreenShotUtility
 	public void getScreenShot(WebDriver driver, String failedTestCase) throws IOException 
 	
 	{
-		//converting webdriver to screenshot mode(Typecasting) -imp code
-		TakesScreenshot scrShot = (TakesScreenshot) driver; // TakesScreenshot Interface' capture the current situation of the //method Interface provided bytestNG-Selenium screenshot can't take screenshot so typecasting to take screenshots.
-													
-		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);  //Capture the screenshot of failed test cases using getScreenshotAs method, store it as a  temporary file
 		
-		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date()); //create date and time
+		TakesScreenshot scrShot = (TakesScreenshot) driver;
+													
+		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);  
+		
+		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date()); 
 		
 		File f1 = new File(System.getProperty("user.dir") + "//outputScreenShot");   
 		if (!f1.exists()) {
-			f1.mkdirs(); // create a folder if it's doesn't exist.
+			f1.mkdirs(); 
 		}
-		String destination = System.getProperty("user.dir") + "//outputScreenShot//" + failedTestCase + timeStamp + ".png";//Decide final screenshot path
+		String destination = System.getProperty("user.dir") + "//outputScreenShot//" + failedTestCase + timeStamp + ".png";
 		
-		File finalDestination = new File(destination); //
+		File finalDestination = new File(destination); 
 		
-		FileHandler.copy(screenShot, finalDestination); //FileHandler class & copy() -Copy screenshots to final location, screenshots permanently saved to mentioned location.
+		FileHandler.copy(screenShot, finalDestination); 
 	}
 }

@@ -6,8 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class PageUtility // Repetitive steps for page class created under Page utility , it should be
-							// rich
+public class PageUtility 
 
 {
 
