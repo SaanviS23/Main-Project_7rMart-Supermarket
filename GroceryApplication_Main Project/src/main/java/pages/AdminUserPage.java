@@ -36,16 +36,20 @@ public AdminUserPage clickOnaddNewButton()
 	return this;
 }
 
-
-public AdminUserPage enterUserNameandPassword()
-
-{
+public AdminUserPage enterUserNameandPassword(String username, String password) 
+	{
+        usernamefield.sendKeys(username);
+        passwordfield.sendKeys(password);
+        return this;
+	
+	/*
 	FakerUtility fakerutility=new FakerUtility();
 	String username=fakerutility.generateUsername();
 	String password=fakerutility.generatePassword();
 	usernamefield.sendKeys(username);
 	passwordfield.sendKeys(password);
 	return this;
+	*/
 	
 }
 

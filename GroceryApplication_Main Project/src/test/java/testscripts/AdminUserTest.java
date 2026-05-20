@@ -12,6 +12,7 @@ import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 //import utilities.PageUtility;
 
 
@@ -33,7 +34,12 @@ public void addNewAdminUser() throws IOException
 	
 	AdminUserPage adminuserpage=new AdminUserPage(driver);
 	adminuserpage=homepage.clickOnMoreInfoinAdminUser();
-	adminuserpage.clickOnaddNewButton().enterUserNameandPassword();
+	adminuserpage.clickOnaddNewButton();
+	
+	FakerUtility fakerutility = new FakerUtility();
+    String fakeUsername = fakerutility.generateUsername();
+    String fakePassword = fakerutility.generatePassword();
+	adminuserpage.enterUserNameandPassword(fakeUsername,fakePassword);
 	
 	String dropdownValue = ExcelUtility.getStringData(1, 0, "admindropdown");
 	adminuserpage.selectUserFromDropdown(dropdownValue);

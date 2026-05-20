@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-29T00:57:41 SGT" name="Suite" finished-at="2026-04-29T00:57:51 SGT" duration-ms="9976">
+  <suite started-at="2026-05-20T12:47:10 SGT" name="Suite" finished-at="2026-05-20T12:47:27 SGT" duration-ms="16517">
     <groups>
     </groups>
-    <test started-at="2026-04-29T00:57:41 SGT" name="Test" finished-at="2026-04-29T00:57:51 SGT" duration-ms="9976">
-      <class name="testscripts.ManageFooterTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscripts.ManageFooterTest@7bbc8656]" started-at="2026-04-29T00:57:41 SGT" name="browserInitialization" finished-at="2026-04-29T00:57:46 SGT" duration-ms="4723" status="PASS">
+    <test started-at="2026-05-20T12:47:10 SGT" name="Test" finished-at="2026-05-20T12:47:27 SGT" duration-ms="16517">
+      <class name="testscripts.AdminUserTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscripts.AdminUserTest@7bbc8656]" started-at="2026-05-20T12:47:10 SGT" name="browserInitialization" finished-at="2026-05-20T12:47:21 SGT" duration-ms="10872" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="updateFooterTextDetails()[pri:1, instance:testscripts.ManageFooterTest@7bbc8656]" started-at="2026-04-29T00:57:46 SGT" name="updateFooterTextDetails" description="This test is to verify whether user is able to update footer details under Manage Footer" finished-at="2026-04-29T00:57:51 SGT" duration-ms="5213" status="PASS">
+        <test-method signature="addNewAdminUser()[pri:1, instance:testscripts.AdminUserTest@7bbc8656]" started-at="2026-05-20T12:47:21 SGT" name="addNewAdminUser" description="This testcase is to verify whether user is able to add and update admin details under Manage Admin" finished-at="2026-05-20T12:47:27 SGT" duration-ms="5602" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- updateFooterTextDetails -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageFooterTest@7bbc8656]" started-at="2026-04-29T00:57:51 SGT" name="browserQuit" finished-at="2026-04-29T00:57:51 SGT" duration-ms="2" status="PASS">
+        </test-method> <!-- addNewAdminUser -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUserTest@7bbc8656]" started-at="2026-05-20T12:47:27 SGT" name="browserQuit" finished-at="2026-05-20T12:47:27 SGT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=updateFooterTextDetails status=SUCCESS method=ManageFooterTest.updateFooterTextDetails()[pri:1, instance:testscripts.ManageFooterTest@7bbc8656] output={null}]]]>
+                <![CDATA[[TestResult name=addNewAdminUser status=SUCCESS method=AdminUserTest.addNewAdminUser()[pri:1, instance:testscripts.AdminUserTest@7bbc8656] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscripts.ManageFooterTest -->
+      </class> <!-- testscripts.AdminUserTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

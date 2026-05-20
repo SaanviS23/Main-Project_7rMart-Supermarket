@@ -32,12 +32,13 @@ public ManageContactPage clickonactionlink()
 	return this;
 }
 
-public ManageContactPage editEmailfieldValueandenterNew()
+public ManageContactPage editEmailfieldValueandenterNew(String emailvalue)
 
 {
 	email.clear();
-	FakerUtility faker=new FakerUtility();
+/*	FakerUtility faker=new FakerUtility();
 	String emailvalue=faker.generateEmail();
+	*/
 	email.sendKeys(emailvalue);
 	return this;
 	

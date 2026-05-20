@@ -34,36 +34,41 @@ public class ManageFooterPage
 		return this;
 	}
 	
-	public ManageFooterPage editAndUpdateAddress()
+	public ManageFooterPage editAndUpdateAddress(String addressvalue)
 	{
 
 		
 		address.clear();
-		FakerUtility faker=new FakerUtility();
+	/*FakerUtility faker=new FakerUtility();
 		String addressvalue=faker.generateAddress();
+		*/
 		address.sendKeys(addressvalue);
 		return this;
 		
 	}	
 	
 	
-	public ManageFooterPage editAndUpdateEmail()
+	public ManageFooterPage editAndUpdateEmail(String emailvalue)
 	
 	{
 		email.clear();
+		/*
 		FakerUtility faker=new FakerUtility();
 		String emailvalue=faker.generateEmail();
+		*/
 		email.sendKeys(emailvalue);
 		return this;
 		
 	}
 	
-	 public ManageFooterPage editAndUpdatePhone()
+	 public ManageFooterPage editAndUpdatePhone(String phone)
 	{
 		
 		 phonenumber.clear();
-		FakerUtility faker=new FakerUtility();
+		
+		 /*FakerUtility faker=new FakerUtility();
 		String phone=faker.generatePhoneNumber();
+		*/
 		phonenumber.sendKeys(phone);
 		return this;
 	}

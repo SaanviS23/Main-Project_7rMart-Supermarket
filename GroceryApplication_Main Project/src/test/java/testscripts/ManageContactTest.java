@@ -10,6 +10,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageContactPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class ManageContactTest extends BaseTest 
 
@@ -30,7 +31,12 @@ public void updateExistingContactUsdetails() throws IOException
 	ManageContactPage managecontact=new ManageContactPage(driver);
 			
 			managecontact=homepage.clickOnMoreinfoofContactus();
-			managecontact.clickonactionlink().editEmailfieldValueandenterNew().clickonUpdatebutton();
+			managecontact.clickonactionlink();
+			FakerUtility faker=new FakerUtility();
+			String emailvalue=faker.generateEmail();
+			managecontact.editEmailfieldValueandenterNew(emailvalue);
+			
+			managecontact.clickonUpdatebutton();
 			
 			boolean savemessage=managecontact.isAlertDisplayed();
 			Assert.assertTrue(savemessage,Constant.CONTACTUPDATEMESSAGE);

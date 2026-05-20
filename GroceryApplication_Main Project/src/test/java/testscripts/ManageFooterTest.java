@@ -10,6 +10,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageFooterPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class ManageFooterTest extends BaseTest 
 
@@ -29,7 +30,18 @@ public class ManageFooterTest extends BaseTest
 	
 	ManageFooterPage managefooter=new ManageFooterPage(driver);
 	managefooter=homepage.clickonmoreinfolinkonManageFooter();
-	managefooter.clickonactionlink().editAndUpdateAddress().editAndUpdateEmail().editAndUpdatePhone().clickOnSubmit();
+	managefooter.clickonactionlink();
+	
+	FakerUtility faker=new FakerUtility();
+	String addressvalue=faker.generateAddress();
+	managefooter.editAndUpdateAddress(addressvalue);
+	
+	String emailvalue=faker.generateEmail();
+	managefooter.editAndUpdateEmail(emailvalue);
+	
+	String phone=faker.generatePhoneNumber();
+	managefooter.editAndUpdatePhone(phone).clickOnSubmit();
+	
 	boolean savemessage=managefooter.isAlertDisplayed();
 	Assert.assertTrue(savemessage,Constant.FOOTERUPDATEMESSAGE);
 	
